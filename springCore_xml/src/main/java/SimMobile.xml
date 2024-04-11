@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<bean id="sim" class="xml_basedConfiguration.Sim">
+	<constructor-arg name="type" value="prepaid"></constructor-arg>
+	<constructor-arg name="name" value="jio"></constructor-arg>
+	
+	</bean>
+	
+	<bean id="mobile" class="xml_basedConfiguration.Mobile">
+	<constructor-arg name="brand" value="vivo"></constructor-arg>
+	<constructor-arg name="price" value="15000"></constructor-arg>
+	<constructor-arg name="s" ref="sim"></constructor-arg>	
+	</bean>
+	
+</beans>
